@@ -32,7 +32,7 @@ public class DriverSingleton {
         }
     }
 
-    public void CloseAllDrivers(){
+    public void quitDriver(){
         driver.quit();
     }
 }
