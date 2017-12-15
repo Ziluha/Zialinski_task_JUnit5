@@ -1,12 +1,13 @@
-package com.page.objects.gmail.authorization;
+package com.pages.objects.gmail.authorization;
 
 import com.driver.DriverSingleton;
+import com.pages.base.BasePage;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class GmailPassword {
+public class GmailPasswordPage extends BasePage{
     private WebDriverWait wait;
 
     @FindBy(how = How.XPATH, using = "//div[@jsname='B34EJ']")
@@ -27,6 +28,8 @@ public class GmailPassword {
         passwordField.click();
         passwordField.sendKeys(password);
     }
+
+    public GmailPasswordPage(){super();}
 
     public void submitPassword(){
         submitPasswordButton.click();

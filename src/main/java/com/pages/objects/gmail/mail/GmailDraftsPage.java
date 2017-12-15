@@ -1,4 +1,4 @@
-package com.page.objects.gmail.mail;
+package com.pages.objects.gmail.mail;
 
 import com.driver.DriverSingleton;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class GmailDrafts {
+public class GmailDraftsPage {
     private WebDriverWait wait;
     private String draftsTitle = "Drafts";
 
@@ -24,6 +24,8 @@ public class GmailDrafts {
 
     @FindBy(how = How.XPATH, using = "//div[@role='button' and @act='16']/div")
     private WebElement discardDraftsButton;
+
+    public GmailDraftsPage(){super();}
 
     public boolean isDraftAdded(String messageSubject){
         return draftsSubjectsList.get(0).getText().equals(messageSubject);

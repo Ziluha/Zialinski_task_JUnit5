@@ -11,7 +11,7 @@ public class DriverSingleton {
 
     private DriverSingleton(){}
 
-    public static synchronized DriverSingleton getInstance(){
+    public static DriverSingleton getInstance(){
         if(instance == null)
             instance = new DriverSingleton();
         return instance;

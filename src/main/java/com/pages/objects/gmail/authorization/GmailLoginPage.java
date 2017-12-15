@@ -1,12 +1,13 @@
-package com.page.objects.gmail.authorization;
+package com.pages.objects.gmail.authorization;
 
 import com.driver.DriverSingleton;
+import com.pages.base.BasePage;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class GmailLogin {
+public class GmailLoginPage extends BasePage{
     private WebDriverWait wait;
 
     @FindBy(how = How.ID, using = "identifierId")
@@ -17,6 +18,8 @@ public class GmailLogin {
 
     @FindBy(how = How.ID, using = "identifierNext")
     private WebElement submitLoginButton;
+
+    public GmailLoginPage(){super();}
 
     public void inputLogin(String login){
         loginField.click();

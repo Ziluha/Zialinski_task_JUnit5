@@ -1,12 +1,13 @@
-package com.page.objects.gmail.mail;
+package com.pages.objects.gmail.mail;
 
 import com.driver.DriverSingleton;
+import com.pages.base.BasePage;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.*;
 
-public class GmailInbox {
+public class GmailInboxPage extends BasePage{
     private WebDriverWait wait;
 
     @FindBy(how = How.XPATH, using = "//td[contains(@class, 'HE')]//span[contains(text(), 'Saved')]")
@@ -20,6 +21,8 @@ public class GmailInbox {
 
     @FindBy(how=How.XPATH, using = "//div[@role='navigation']//a[@href='https://mail.google.com/mail/#drafts']")
     private WebElement draftsLink;
+
+    public GmailInboxPage(){super();}
 
     public void clickComposeButton(){
         composeButton.click();
