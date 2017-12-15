@@ -7,8 +7,6 @@ import com.enums.Browsers;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 
-import java.io.IOException;
-import java.util.*;
 
 public class BaseTest{
     protected WebDriver driver;
@@ -36,6 +34,7 @@ public class BaseTest{
 
     @BeforeEach
     public void initTest(){
+        driverConfig = new DriverConfig();
         chooseDriverInstance(browserName);
         driverConfig.loadApp(driver, "https://gmail.com");
     }

@@ -26,9 +26,11 @@ public class DriverSingleton {
             case Chrome:
                 System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
                 driver = new ChromeDriver();
+                break;
             case Firefox:
                 System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
                 driver = new FirefoxDriver();
+                break;
         }
     }
 

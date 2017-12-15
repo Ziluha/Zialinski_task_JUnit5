@@ -6,8 +6,6 @@ import com.pages.objects.gmail.mail.*;
 import org.openqa.selenium.WebDriver;
 
 public class PagesFactory {
-    private WebDriver driver = DriverSingleton.getInstance().getDriver();
-
     public GmailLoginPage getLoginPage(){
         return new GmailLoginPage();
     }
