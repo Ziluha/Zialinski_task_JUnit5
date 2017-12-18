@@ -4,10 +4,16 @@ package com.gmail;
 import com.driver.DriverSingleton;
 import com.driver.config.DriverConfig;
 import com.enums.Browsers;
-import org.junit.jupiter.api.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 
+import java.util.Arrays;
+import java.util.Collection;
 
+@RunWith(Parameterized.class)
 public class BaseTest{
     protected WebDriver driver;
     private Browsers.name browserName;
@@ -32,14 +38,23 @@ public class BaseTest{
         }
     }
 
-    @BeforeEach
+
+    @Parameterized.Parameters
+    public static Collection<Object> data() {
+        Object[][] data = new Object[][]{
+                { Browsers.name.Chrome},
+                {Browsers.name.Firefox}};
+        return Arrays.asList(data);
+    }
+
+    @Before
     public void initTest(){
         driverConfig = new DriverConfig();
         chooseDriverInstance(browserName);
         driverConfig.loadApp(driver, "https://gmail.com");
     }
 
-    @AfterEach
+    @After
     public void endTest(){
         driverSingleton.quitDriver();
     }

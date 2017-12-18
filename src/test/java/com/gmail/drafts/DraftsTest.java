@@ -3,18 +3,18 @@ package com.gmail.drafts;
 import com.enums.Browsers;
 import com.gmail.BaseTest;
 import com.pages.factory.PagesFactory;
-import org.junit.jupiter.api.*;
-import sun.jvm.hotspot.debugger.Page;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class DraftsTest extends BaseTest {
     private PagesFactory pages= new PagesFactory();
 
-    public DraftsTest() {
-        super(Browsers.name.Chrome);
+    public DraftsTest(Browsers.name browserName) {
+        super(browserName);
     }
 
-    @BeforeEach
+    @Before
     public void setUpAuth(){
         pages.getLoginPage().inputLogin("test.task.zel");
         pages.getLoginPage().submitLogin();
@@ -26,24 +26,24 @@ public class DraftsTest extends BaseTest {
     public void addMessageToDrafts(){
         pages.getInboxPage().clickComposeButton();
         pages.getInboxPage().inputMessageSubject("example");
-        assertTrue(pages.getInboxPage().isSavedLabelPresented(),
-                "Saved Label is not presented");
+        Assert.assertTrue("Saved Label is not presented",
+                pages.getInboxPage().isSavedLabelPresented());
         pages.getInboxPage().clickDraftsLink();
-        assertTrue(pages.getDraftsPage().isDraftPageOpened(),
-                "Draft Page is not opened");
-        assertTrue(pages.getDraftsPage().isDraftAdded("example"),
-                "No message with this subject in drafts");
+        Assert.assertTrue("Draft Page is not opened",
+                pages.getDraftsPage().isDraftPageOpened());
+        Assert.assertTrue("No message with this subject in drafts",
+                pages.getDraftsPage().isDraftAdded("example"));
     }
 
     @Test
     public void deleteMessageFromDrafts(){
         pages.getInboxPage().clickDraftsLink();
-        assertTrue(pages.getDraftsPage().isDraftPageOpened(),
-                "Draft Page is not opened");
+        Assert.assertTrue("Draft Page is not opened",
+                pages.getDraftsPage().isDraftPageOpened());
         int countOfDraftsAtStart = pages.getDraftsPage().getCountOfDrafts();
         pages.getDraftsPage().chooseFirstDraft();
         pages.getDraftsPage().clickDiscardDraftButton();
-        assertEquals(countOfDraftsAtStart-1, pages.getDraftsPage().getCountOfDrafts(),
-                "Count of drafts at start and after discarding doesn't match");
+        Assert.assertEquals("Count of drafts at start and after discarding doesn't match",
+                countOfDraftsAtStart-1, pages.getDraftsPage().getCountOfDrafts());
     }
 }
