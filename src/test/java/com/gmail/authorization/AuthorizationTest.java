@@ -26,7 +26,7 @@ public class AuthorizationTest extends BaseTest{
     public void authWithInvalidLogin(){
         pages.getLoginPage().inputLogin("test.invalid.zel");
         pages.getLoginPage().submitLogin();
-        Assert.assertTrue("Login Error Lable is not presented",
+        Assert.assertTrue("Login Error Label is not presented",
                 pages.getLoginPage().isLoginErrorLabelPresented());
     }
 
@@ -36,7 +36,7 @@ public class AuthorizationTest extends BaseTest{
         pages.getLoginPage().submitLogin();
         pages.getPasswordPage().inputPassword("InvalidPassword");
         pages.getPasswordPage().submitPassword();
-        Assert.assertTrue("Password Error Lable is not presented",
+        Assert.assertTrue("Password Error Label is not presented",
                 pages.getPasswordPage().isPasswordErrorLabelPresented());
     }
 }

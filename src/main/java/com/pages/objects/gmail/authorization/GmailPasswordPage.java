@@ -28,7 +28,6 @@ public class GmailPasswordPage extends BasePage{
         passwordField.click();
         passwordField.sendKeys(password);
     }
-
     public GmailPasswordPage(){super();}
 
     public void submitPassword(){

@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 import java.util.Arrays;
 import java.util.Collection;
 
-@RunWith(Parameterized.class)
+@RunWith(value = Parameterized.class)
 public class BaseTest{
     protected WebDriver driver;
     private Browsers.name browserName;
@@ -37,7 +37,6 @@ public class BaseTest{
                 break;
         }
     }
-
 
     @Parameterized.Parameters
     public static Collection<Object> data() {
