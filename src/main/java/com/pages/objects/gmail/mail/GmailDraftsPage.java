@@ -1,15 +1,17 @@
 package com.pages.objects.gmail.mail;
 
 import com.driver.DriverSingleton;
+import com.pages.base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class GmailDraftsPage {
+public class GmailDraftsPage extends BasePage {
     private WebDriverWait wait;
     private String draftsTitle = "Drafts";
 

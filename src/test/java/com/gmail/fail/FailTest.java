@@ -15,7 +15,7 @@ public class FailTest extends BaseTest{
 
     @Test
     public void checkFail(){
-        pages.getLoginPage().inputLogin("invalidLogin");
+        pages.getLoginPage().inputLogin("test.invalid.zel");
         pages.getLoginPage().submitLogin();
         assertTrue(pages.getPasswordPage().IsLoginApplied(),
                 "Login was not applied");

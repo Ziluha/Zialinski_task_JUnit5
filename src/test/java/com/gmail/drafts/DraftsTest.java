@@ -44,6 +44,6 @@ public class DraftsTest extends BaseTest {
         pages.getDraftsPage().chooseFirstDraft();
         pages.getDraftsPage().clickDiscardDraftButton();
         assertEquals(countOfDraftsAtStart-1, pages.getDraftsPage().getCountOfDrafts(),
-                "Count of drafts at start and afted discarding doesn't match");
+                "Count of drafts at start and after discarding doesn't match");
     }
 }
