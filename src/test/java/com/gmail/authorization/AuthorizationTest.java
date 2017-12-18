@@ -15,28 +15,28 @@ public class AuthorizationTest extends BaseTest{
 
     @Test
     public void authWithValidData(){
-        pages.getLoginPage().inputLogin("test.task.zel");
-        pages.getLoginPage().submitLogin();
-        pages.getPasswordPage().inputPassword("Test1234Test");
-        pages.getPasswordPage().submitPassword();
-        Assert.assertTrue("User was not logged in", pages.getInboxPage().isLoginSucceed());
+        pages.getLoginPage(driver).inputLogin("test.task.zel");
+        pages.getLoginPage(driver).submitLogin();
+        pages.getPasswordPage(driver).inputPassword("Test1234Test");
+        pages.getPasswordPage(driver).submitPassword();
+        Assert.assertTrue("User was not logged in", pages.getInboxPage(driver).isLoginSucceed());
     }
 
     @Test
     public void authWithInvalidLogin(){
-        pages.getLoginPage().inputLogin("test.invalid.zel");
-        pages.getLoginPage().submitLogin();
+        pages.getLoginPage(driver).inputLogin("test.invalid.zel");
+        pages.getLoginPage(driver).submitLogin();
         Assert.assertTrue("Login Error Label is not presented",
-                pages.getLoginPage().isLoginErrorLabelPresented());
+                pages.getLoginPage(driver).isLoginErrorLabelPresented());
     }
 
     @Test
     public void authWithInvalidPassword(){
-        pages.getLoginPage().inputLogin("test.task.zel");
-        pages.getLoginPage().submitLogin();
-        pages.getPasswordPage().inputPassword("InvalidPassword");
-        pages.getPasswordPage().submitPassword();
+        pages.getLoginPage(driver).inputLogin("test.task.zel");
+        pages.getLoginPage(driver).submitLogin();
+        pages.getPasswordPage(driver).inputPassword("InvalidPassword");
+        pages.getPasswordPage(driver).submitPassword();
         Assert.assertTrue("Password Error Label is not presented",
-                pages.getPasswordPage().isPasswordErrorLabelPresented());
+                pages.getPasswordPage(driver).isPasswordErrorLabelPresented());
     }
 }

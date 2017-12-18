@@ -7,6 +7,7 @@ import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GmailLoginPage extends BasePage{
+    private WebDriver driver;
     private WebDriverWait wait;
 
     @FindBy(how = How.ID, using = "identifierId")
@@ -18,7 +19,7 @@ public class GmailLoginPage extends BasePage{
     @FindBy(how = How.ID, using = "identifierNext")
     private WebElement submitLoginButton;
 
-    public GmailLoginPage(){super();}
+    public GmailLoginPage(WebDriver driver){super(driver); this.driver = driver;}
 
     public void inputLogin(String login){
         loginField.click();
@@ -31,7 +32,7 @@ public class GmailLoginPage extends BasePage{
 
     public boolean isLoginErrorLabelPresented(){
         try {
-            wait = new WebDriverWait(DriverSingleton.getInstance().getDriver(), 10);
+            wait = new WebDriverWait(driver, 10);
             return wait.until(elem -> loginErrorLabel.isDisplayed());
         }
         catch (NoSuchElementException ex){

@@ -9,6 +9,8 @@ import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -21,19 +23,14 @@ public class BaseTest{
     private DriverConfig driverConfig;
 
     public BaseTest(Browsers.name browserName){
-        this.browserName = browserName;
-        driverSingleton = DriverSingleton.getInstance();
-    }
-
-    public void chooseDriverInstance(Browsers.name browserName){
+        //this.browserName = browserName;
+        driverSingleton = new DriverSingleton();
         switch (browserName){
-            case Firefox:
-                driverSingleton.initBrowser(Browsers.name.Firefox);
-                driver = driverSingleton.getDriver();
-                break;
             case Chrome:
-                driverSingleton.initBrowser(Browsers.name.Chrome);
-                driver = driverSingleton.getDriver();
+                this.driver = driverSingleton.initBrowser(browserName);
+                break;
+            case Firefox:
+                this.driver = driverSingleton.initBrowser(browserName);
                 break;
         }
     }
@@ -49,12 +46,12 @@ public class BaseTest{
     @Before
     public void initTest(){
         driverConfig = new DriverConfig();
-        chooseDriverInstance(browserName);
+        //chooseDriverInstance(browserName);
         driverConfig.loadApp(driver, "https://gmail.com");
     }
 
     @After
     public void endTest(){
-        driverSingleton.quitDriver();
+        driverSingleton.quitDriver(driver);
     }
 }

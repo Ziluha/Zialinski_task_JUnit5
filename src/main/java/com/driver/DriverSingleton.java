@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverSingleton {
-    private static DriverSingleton instance;
+    /*private static DriverSingleton instance;
     private WebDriver driver;
 
     private DriverSingleton(){}
@@ -19,22 +19,21 @@ public class DriverSingleton {
 
     public WebDriver getDriver(){
         return driver;
-    }
+    }*/
 
-    public void initBrowser(Browsers.name browser){
-        switch (browser){
+    public WebDriver initBrowser(Browsers.name browserName){
+        switch (browserName){
             case Chrome:
                 System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-                driver = new ChromeDriver();
-                break;
+                return new ChromeDriver();
             case Firefox:
                 System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-                driver = new FirefoxDriver();
-                break;
+                return new FirefoxDriver();
         }
+        return null;
     }
 
-    public void quitDriver(){
+    public void quitDriver(WebDriver driver){
         driver.quit();
     }
 }

@@ -16,34 +16,34 @@ public class DraftsTest extends BaseTest {
 
     @Before
     public void setUpAuth(){
-        pages.getLoginPage().inputLogin("test.task.zel");
-        pages.getLoginPage().submitLogin();
-        pages.getPasswordPage().inputPassword("Test1234Test");
-        pages.getPasswordPage().submitPassword();
+        pages.getLoginPage(driver).inputLogin("test.task.zel");
+        pages.getLoginPage(driver).submitLogin();
+        pages.getPasswordPage(driver).inputPassword("Test1234Test");
+        pages.getPasswordPage(driver).submitPassword();
     }
 
     @Test
     public void addMessageToDrafts(){
-        pages.getInboxPage().clickComposeButton();
-        pages.getInboxPage().inputMessageSubject("example");
+        pages.getInboxPage(driver).clickComposeButton();
+        pages.getInboxPage(driver).inputMessageSubject("example");
         Assert.assertTrue("Saved Label is not presented",
-                pages.getInboxPage().isSavedLabelPresented());
-        pages.getInboxPage().clickDraftsLink();
+                pages.getInboxPage(driver).isSavedLabelPresented());
+        pages.getInboxPage(driver).clickDraftsLink();
         Assert.assertTrue("Draft Page is not opened",
-                pages.getDraftsPage().isDraftPageOpened());
+                pages.getDraftsPage(driver).isDraftPageOpened());
         Assert.assertTrue("No message with this subject in drafts",
-                pages.getDraftsPage().isDraftAdded("example"));
+                pages.getDraftsPage(driver).isDraftAdded("example"));
     }
 
     @Test
     public void deleteMessageFromDrafts(){
-        pages.getInboxPage().clickDraftsLink();
+        pages.getInboxPage(driver).clickDraftsLink();
         Assert.assertTrue("Draft Page is not opened",
-                pages.getDraftsPage().isDraftPageOpened());
-        int countOfDraftsAtStart = pages.getDraftsPage().getCountOfDrafts();
-        pages.getDraftsPage().chooseFirstDraft();
-        pages.getDraftsPage().clickDiscardDraftButton();
+                pages.getDraftsPage(driver).isDraftPageOpened());
+        int countOfDraftsAtStart = pages.getDraftsPage(driver).getCountOfDrafts();
+        pages.getDraftsPage(driver).chooseFirstDraft();
+        pages.getDraftsPage(driver).clickDiscardDraftButton();
         Assert.assertEquals("Count of drafts at start and after discarding doesn't match",
-                countOfDraftsAtStart-1, pages.getDraftsPage().getCountOfDrafts());
+                countOfDraftsAtStart-1, pages.getDraftsPage(driver).getCountOfDrafts());
     }
 }

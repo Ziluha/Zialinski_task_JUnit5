@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 public class GmailDraftsPage extends BasePage {
+    private WebDriver driver;
     private WebDriverWait wait;
     private String draftsTitle = "Drafts";
 
@@ -27,7 +28,7 @@ public class GmailDraftsPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//div[@role='button' and @act='16']/div")
     private WebElement discardDraftsButton;
 
-    public GmailDraftsPage(){super();}
+    public GmailDraftsPage(WebDriver driver){super(driver); this.driver = driver;}
 
     public boolean isDraftAdded(String messageSubject){
         return draftsSubjectsList.get(0).getText().equals(messageSubject);
@@ -35,7 +36,6 @@ public class GmailDraftsPage extends BasePage {
 
     public boolean isDraftPageOpened(){
         try{
-            WebDriver driver = DriverSingleton.getInstance().getDriver();
             wait = new WebDriverWait(driver, 10);
             return wait.until(elem -> driver.getTitle().contains(draftsTitle));
         }catch (NoSuchElementException ex){
