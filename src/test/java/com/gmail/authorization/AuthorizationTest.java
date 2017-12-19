@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AuthorizationTest extends BaseTest{
     private PagesFactory pages= new PagesFactory();
 
-    public AuthorizationTest(){
-        super(Browsers.name.Chrome);
+    public AuthorizationTest(Browsers.name browserName){
+        super(browserName);
     }
 
     @Test

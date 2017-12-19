@@ -5,19 +5,13 @@ import com.gmail.BaseTest;
 import com.pages.factory.PagesFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-
-import java.util.Arrays;
-import java.util.Collection;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DraftsTest extends BaseTest {
     private PagesFactory pages= new PagesFactory();
 
-    public DraftsTest() {
-        super(Browsers.name.Chrome);
+    public DraftsTest(Browsers.name browserName) {
+        super(browserName);
     }
 
     @BeforeEach

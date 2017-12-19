@@ -8,6 +8,10 @@
     <artifactId>zialinski</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -59,7 +63,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <parallel>all</parallel>
+                    <parallel>methods</parallel>
                     <forkCount>6</forkCount>
                     <reuseForks>true</reuseForks>
                     <threadCount>6</threadCount>
@@ -67,5 +71,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
