@@ -22,9 +22,9 @@ public class DriverParameterResolver implements ParameterResolver {
     @Override
     public Browsers.name resolveParameter(ParameterContext parameterContext, ExtensionContext extensionContext) throws ParameterResolutionException {
         Browsers.name browser = null;
-        if (parameterContext.getParameter().getType() == BaseTest.class) {
+        if (parameterContext.getParameter().getType() == Browsers.name.class) {
             browser = BROWSERS[0];
         }
-        return BROWSERS[0];
+        return browser;
     }
 }
