@@ -1,47 +1,53 @@
 package com.gmail;
 
-import com.driver.DriverSingleton;
+
+import com.driver.DriverInitQuit;
 import com.driver.config.DriverConfig;
 import com.enums.Browsers;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.platform.runner.JUnitPlatform;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-@ExtendWith(DriverParameterResolver.class)
+import java.util.Arrays;
+import java.util.Collection;
+
+@RunWith(value = Parameterized.class)
 public class BaseTest{
     protected WebDriver driver;
     private Browsers.name browserName;
-    private DriverSingleton driverSingleton;
+    private DriverInitQuit driverInitQuit;
     private DriverConfig driverConfig;
 
     public BaseTest(Browsers.name browserName){
-        //this.browserName = browserName;
-        driverSingleton = new DriverSingleton();
+        driverInitQuit = new DriverInitQuit();
         switch (browserName){
             case Chrome:
-                this.driver = driverSingleton.initBrowser(browserName);
+                this.driver = driverInitQuit.initDriver(browserName);
                 break;
             case Firefox:
-                this.driver = driverSingleton.initBrowser(browserName);
+                this.driver = driverInitQuit.initDriver(browserName);
                 break;
         }
     }
 
-    @BeforeEach
+    @Parameterized.Parameters
+    public static Collection<Object> data() {
+        Object[][] data = new Object[][]{
+                { Browsers.name.Chrome},
+                {Browsers.name.Firefox}};
+        return Arrays.asList(data);
+    }
+
+    @Before
     public void initTest(){
         driverConfig = new DriverConfig();
-        //chooseDriverInstance(browserName);
         driverConfig.loadApp(driver, "https://gmail.com");
     }
 
-    @AfterEach
+    @After
     public void endTest(){
-        driverSingleton.quitDriver(driver);
+        driverInitQuit.quitDriver(driver);
     }
 }

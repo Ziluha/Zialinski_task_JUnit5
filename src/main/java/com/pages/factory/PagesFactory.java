@@ -1,24 +1,27 @@
 package com.pages.factory;
 
-import com.driver.DriverSingleton;
 import com.pages.objects.gmail.authorization.*;
 import com.pages.objects.gmail.mail.*;
 import org.openqa.selenium.WebDriver;
 
 public class PagesFactory {
-    public GmailLoginPage getLoginPage(WebDriver driver){
+    private WebDriver driver;
+    public PagesFactory(WebDriver driver){
+        this.driver = driver;
+    }
+    public GmailLoginPage getLoginPage(){
         return new GmailLoginPage(driver);
     }
 
-    public GmailPasswordPage getPasswordPage(WebDriver driver){
+    public GmailPasswordPage getPasswordPage(){
         return new GmailPasswordPage(driver);
     }
 
-    public GmailInboxPage getInboxPage(WebDriver driver){
+    public GmailInboxPage getInboxPage(){
         return new GmailInboxPage(driver);
     }
 
-    public GmailDraftsPage getDraftsPage(WebDriver driver){
+    public GmailDraftsPage getDraftsPage(){
         return new GmailDraftsPage(driver);
     }
 }

@@ -3,12 +3,11 @@ package com.gmail.authorization;
 import com.enums.Browsers;
 import com.gmail.BaseTest;
 import com.pages.factory.PagesFactory;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class AuthorizationTest extends BaseTest{
-    private PagesFactory pages= new PagesFactory();
+    private PagesFactory pages= new PagesFactory(driver);
 
     public AuthorizationTest(Browsers.name browserName){
         super(browserName);
@@ -16,29 +15,28 @@ public class AuthorizationTest extends BaseTest{
 
     @Test
     public void authWithValidData(){
-        pages.getLoginPage(driver).inputLogin("test.task.zel");
-        pages.getLoginPage(driver).submitLogin();
-        pages.getPasswordPage(driver).inputPassword("Test1234Test");
-        pages.getPasswordPage(driver).submitPassword();
-        assertTrue( pages.getInboxPage(driver).isLoginSucceed(),
-                "User was not logged in");
+        pages.getLoginPage().inputLogin("test.task.zel");
+        pages.getLoginPage().submitLogin();
+        pages.getPasswordPage().inputPassword("Test1234Test");
+        pages.getPasswordPage().submitPassword();
+        Assert.assertTrue("User was not logged in", pages.getInboxPage().isLoginSucceed());
     }
 
     @Test
     public void authWithInvalidLogin(){
-        pages.getLoginPage(driver).inputLogin("test.invalid.zel");
-        pages.getLoginPage(driver).submitLogin();
-        assertTrue(pages.getLoginPage(driver).isLoginErrorLabelPresented(),
-                "Login Error Label is not presented");
+        pages.getLoginPage().inputLogin("test.invalid.zel");
+        pages.getLoginPage().submitLogin();
+        Assert.assertTrue("Login Error Label is not presented",
+                pages.getLoginPage().isLoginErrorLabelPresented());
     }
 
     @Test
     public void authWithInvalidPassword(){
-        pages.getLoginPage(driver).inputLogin("test.task.zel");
-        pages.getLoginPage(driver).submitLogin();
-        pages.getPasswordPage(driver).inputPassword("InvalidPassword");
-        pages.getPasswordPage(driver).submitPassword();
-        assertTrue(pages.getPasswordPage(driver).isPasswordErrorLabelPresented(),
-                "Password Error Label is not presented");
+        pages.getLoginPage().inputLogin("test.task.zel");
+        pages.getLoginPage().submitLogin();
+        pages.getPasswordPage().inputPassword("InvalidPassword");
+        pages.getPasswordPage().submitPassword();
+        Assert.assertTrue("Password Error Label is not presented",
+                pages.getPasswordPage().isPasswordErrorLabelPresented());
     }
 }

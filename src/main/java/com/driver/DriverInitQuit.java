@@ -5,23 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class DriverSingleton {
-    /*private static DriverSingleton instance;
-    private WebDriver driver;
-
-    private DriverSingleton(){}
-
-    public static synchronized DriverSingleton getInstance(){
-        if(instance == null)
-            instance = new DriverSingleton();
-        return instance;
-    }
-
-    public WebDriver getDriver(){
-        return driver;
-    }*/
-
-    public WebDriver initBrowser(Browsers.name browserName){
+public class DriverInitQuit {
+    public WebDriver initDriver(Browsers.name browserName){
         switch (browserName){
             case Chrome:
                 System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");

@@ -1,6 +1,5 @@
 package com.pages.objects.gmail.authorization;
 
-import com.driver.DriverSingleton;
 import com.pages.base.BasePage;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
