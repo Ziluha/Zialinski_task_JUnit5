@@ -6,7 +6,7 @@ import com.pages.factory.PagesFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class AuthorizationTest extends BaseTest{
+public class AuthorizationTest extends BaseTest {
     private PagesFactory pages= new PagesFactory(driver);
 
     public AuthorizationTest(Browsers.name browserName){

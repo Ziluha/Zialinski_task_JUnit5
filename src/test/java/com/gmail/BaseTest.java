@@ -4,8 +4,7 @@ package com.gmail;
 import com.driver.DriverInitQuit;
 import com.driver.config.DriverConfig;
 import com.enums.Browsers;
-import org.junit.After;
-import org.junit.Before;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
@@ -14,22 +13,14 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(value = Parameterized.class)
-public class BaseTest{
+public abstract class BaseTest {
     protected WebDriver driver;
-    private Browsers.name browserName;
     private DriverInitQuit driverInitQuit;
     private DriverConfig driverConfig;
 
     public BaseTest(Browsers.name browserName){
         driverInitQuit = new DriverInitQuit();
-        switch (browserName){
-            case Chrome:
-                this.driver = driverInitQuit.initDriver(browserName);
-                break;
-            case Firefox:
-                this.driver = driverInitQuit.initDriver(browserName);
-                break;
-        }
+        this.driver = driverInitQuit.initDriver(browserName);
     }
 
     @Parameterized.Parameters
