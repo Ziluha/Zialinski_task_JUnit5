@@ -4,6 +4,7 @@ package com.gmail;
 import com.driver.DriverInitQuit;
 import com.driver.config.DriverConfig;
 import com.enums.Browsers;
+import com.properties.PropertiesReading;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -34,7 +35,7 @@ public abstract class BaseTest {
     @Before
     public void initTest(){
         driverConfig = new DriverConfig();
-        driverConfig.loadApp(driver, "https://gmail.com");
+        driverConfig.loadApp(driver, PropertiesReading.getURLs().getProperty("gmailURL"));
     }
 
     @After

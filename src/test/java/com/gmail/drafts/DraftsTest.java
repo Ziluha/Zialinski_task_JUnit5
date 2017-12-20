@@ -3,6 +3,7 @@ package com.gmail.drafts;
 import com.enums.Browsers;
 import com.gmail.BaseTest;
 import com.pages.factory.PagesFactory;
+import com.properties.PropertiesReading;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,9 +17,9 @@ public class DraftsTest extends BaseTest {
 
     @Before
     public void setUpAuth(){
-        pages.getLoginPage().inputLogin("test.task.zel");
+        pages.getLoginPage().inputLogin(PropertiesReading.getCredentials().getProperty("validLogin"));
         pages.getLoginPage().submitLogin();
-        pages.getPasswordPage().inputPassword("Test1234Test");
+        pages.getPasswordPage().inputPassword(PropertiesReading.getCredentials().getProperty("validPassword"));
         pages.getPasswordPage().submitPassword();
     }
 
@@ -40,8 +41,8 @@ public class DraftsTest extends BaseTest {
         pages.getInboxPage().clickDraftsLink();
         Assert.assertTrue("Draft Page is not opened",
                 pages.getDraftsPage().isDraftPageOpened());
-        int countOfDraftsAtStart = pages.getDraftsPage().getCountOfDrafts();
         pages.getDraftsPage().chooseFirstDraft();
+        int countOfDraftsAtStart = pages.getDraftsPage().getCountOfDrafts();
         pages.getDraftsPage().clickDiscardDraftButton();
         Assert.assertEquals("Count of drafts at start and after discarding doesn't match",
                 countOfDraftsAtStart-1, pages.getDraftsPage().getCountOfDrafts());
