@@ -4,8 +4,7 @@ import com.enums.Browsers;
 import com.gmail.BaseTest;
 import com.pages.factory.PagesFactory;
 import com.properties.PropertiesReading;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 
 public class AuthorizationTest extends BaseTest {
     private PagesFactory pages= new PagesFactory(driver);

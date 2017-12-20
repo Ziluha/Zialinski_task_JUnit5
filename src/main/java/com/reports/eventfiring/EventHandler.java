@@ -5,21 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
 public class EventHandler implements WebDriverEventListener{
-   /* private void debugLogExtent(String debugInfo){
-        if(test != null)
-            test.debug(debugInfo);
-    }
-
-    private void infoLogExtent(String info){
-        if(test != null)
-            test.info(info);
-    }
-
-    private void exceptionLogExtent(String exception){
-        if(test != null)
-            test.error(exception);
-    }*/
-
     public void beforeAlertAccept(WebDriver webDriver) {
 
     }
@@ -39,37 +24,31 @@ public class EventHandler implements WebDriverEventListener{
     public void beforeNavigateTo(String s, WebDriver webDriver) {
         String errorMessage = "Navigating to " + s;
         System.out.println(errorMessage);
-        //debugLogExtent(errorMessage);
     }
 
     public void afterNavigateTo(String s, WebDriver webDriver) {
         String errorMessage = "Navigated to " + s;
         System.out.println(errorMessage);
-        //infoLogExtent(errorMessage);
     }
 
     public void beforeNavigateBack(WebDriver webDriver) {
-        String errorMessage = "Before beforeNavigateBack " + webDriver.getCurrentUrl();
+        String errorMessage = "Navigating back from " + webDriver.getCurrentUrl();
         System.out.println(errorMessage);
-       // debugLogExtent(errorMessage);
     }
 
     public void afterNavigateBack(WebDriver webDriver) {
-        String errorMessage = "After navigateback to " + webDriver.getCurrentUrl();
+        String errorMessage = "Navigated back to " + webDriver.getCurrentUrl();
         System.out.println(errorMessage);
-       // infoLogExtent(errorMessage);
     }
 
     public void beforeNavigateForward(WebDriver webDriver) {
-        String errorMessage = "Before beforeNavigateForward " + webDriver.getCurrentUrl();
+        String errorMessage = "Navigating forward from " + webDriver.getCurrentUrl();
         System.out.println(errorMessage);
-       // debugLogExtent(errorMessage);
     }
 
     public void afterNavigateForward(WebDriver webDriver) {
-        String errorMessage = "AfterNavigateForward to " + webDriver.getCurrentUrl();
+        String errorMessage = "Navigated forward to " + webDriver.getCurrentUrl();
         System.out.println(errorMessage);
-        //infoLogExtent(errorMessage);
     }
 
     public void beforeNavigateRefresh(WebDriver webDriver) {
@@ -83,55 +62,46 @@ public class EventHandler implements WebDriverEventListener{
     public void beforeFindBy(By by, WebElement webElement, WebDriver webDriver) {
         String errorMessage = "Finding element by " + by.toString();
         System.out.println(errorMessage);
-        //debugLogExtent(errorMessage);
     }
 
     public void afterFindBy(By by, WebElement webElement, WebDriver webDriver) {
-        String errorMessage = "Find happened using method " + by.toString();
+        String errorMessage = "Element founded " + by.toString();
         System.out.println(errorMessage);
-        //infoLogExtent(errorMessage);
     }
 
     public void beforeClickOn(WebElement webElement, WebDriver webDriver) {
-        String errorMessage = "About to click on the " + webElement.toString();
+        String errorMessage = "Clicking on " + webElement.toString();
         System.out.println(errorMessage);
-        //debugLogExtent(errorMessage);
     }
 
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
         String errorMessage = "Clicked on " + webElement.toString();
         System.out.println(errorMessage);
-        //infoLogExtent(errorMessage);
     }
 
     public void beforeChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
-        String errorMessage = "Before changing of value" + webElement.toString();
+        String errorMessage = "Changing value " + webElement.toString();
         System.out.println(errorMessage);
-        //debugLogExtent(errorMessage);
     }
 
     public void afterChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
         String errorMessage = "Value changed " + webElement.toString();
         System.out.println(errorMessage);
-        //infoLogExtent(errorMessage);
     }
 
     public void beforeScript(String s, WebDriver webDriver) {
-        String errorMessage = "Before beforeScript " + s;
+        String errorMessage = "Before script " + s;
         System.out.println(errorMessage);
-        //debugLogExtent(errorMessage);
     }
 
     public void afterScript(String s, WebDriver webDriver) {
-        String errorMessage = "AfterScript, Script is " + s;
+        String errorMessage = "Script is " + s;
         System.out.println(errorMessage);
-        //infoLogExtent(errorMessage);
     }
 
     public void onException(Throwable throwable, WebDriver webDriver) {
         String errorMessage = "Exception occured at " + throwable.getMessage();
         System.out.println(errorMessage);
-        //exceptionLogExtent(errorMessage);
     }
 
 }

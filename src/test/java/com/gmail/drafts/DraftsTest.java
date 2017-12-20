@@ -5,8 +5,7 @@ import com.gmail.BaseTest;
 import com.pages.factory.PagesFactory;
 import com.properties.PropertiesReading;
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 public class DraftsTest extends BaseTest {
     private PagesFactory pages= new PagesFactory(driver);

@@ -1,6 +1,5 @@
 package com.gmail;
 
-
 import com.driver.DriverInitQuit;
 import com.driver.config.DriverConfig;
 import com.enums.Browsers;
@@ -27,8 +26,8 @@ public abstract class BaseTest {
     @Parameterized.Parameters
     public static Collection<Object> data() {
         Object[][] data = new Object[][]{
-                { Browsers.name.Chrome},
-                {Browsers.name.Firefox}};
+                { Browsers.name.Chrome },
+                { Browsers.name.Firefox }};
         return Arrays.asList(data);
     }
 
