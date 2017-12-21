@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.gmail.authorization.AuthorizationTest" time="74.877" tests="6" errors="3" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="9"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="webdriver.chrome.driver" value="drivers/chromedriver.exe"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\Github_Repos\Zialinski_task_JUnit5\target\test-classes;D:\Github_Repos\Zialinski_task_JUnit5\target\classes;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-java\3.8.1\selenium-java-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-api\3.8.1\selenium-api-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.8.1\selenium-chrome-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.8.1\selenium-edge-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.8.1\selenium-firefox-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.8.1\selenium-ie-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.8.1\selenium-opera-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.8.1\selenium-remote-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.8.1\selenium-safari-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-support\3.8.1\selenium-support-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\net\bytebuddy\byte-buddy\1.7.5\byte-buddy-1.7.5.jar;C:\Users\ivan.zialinski\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\ivan.zialinski\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\ivan.zialinski\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ivan.zialinski\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\ivan.zialinski\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\ivan.zialinski\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\ivan.zialinski\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\ivan.zialinski\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\ivan.zialinski\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\ivan.zialinski\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\ivan.zialinski\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\ivan.zialinski\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="java.vm.specification.version" value="9"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-9.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\IVAN~1.ZIA\AppData\Local\Temp\surefire14939597171986340936\surefirebooter9604789136141130597.jar C:\Users\ivan.zialinski\AppData\Local\Temp\surefire14939597171986340936 2017-12-20T14-26-16_155-jvmRun2 surefire1041748887242081392tmp surefire_03824884830568493148tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\Github_Repos\Zialinski_task_JUnit5\target\test-classes;D:\Github_Repos\Zialinski_task_JUnit5\target\classes;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-java\3.8.1\selenium-java-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-api\3.8.1\selenium-api-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.8.1\selenium-chrome-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.8.1\selenium-edge-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.8.1\selenium-firefox-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.8.1\selenium-ie-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.8.1\selenium-opera-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.8.1\selenium-remote-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.8.1\selenium-safari-driver-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\seleniumhq\selenium\selenium-support\3.8.1\selenium-support-3.8.1.jar;C:\Users\ivan.zialinski\.m2\repository\net\bytebuddy\byte-buddy\1.7.5\byte-buddy-1.7.5.jar;C:\Users\ivan.zialinski\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\ivan.zialinski\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\ivan.zialinski\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ivan.zialinski\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\ivan.zialinski\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\ivan.zialinski\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\ivan.zialinski\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\ivan.zialinski\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\ivan.zialinski\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\ivan.zialinski\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\ivan.zialinski\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\ivan.zialinski\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\ivan.zialinski\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ivan.zialinski"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-9.0.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Github_Repos\Zialinski_task_JUnit5"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\IVAN~1.ZIA\AppData\Local\Temp\surefire14939597171986340936\surefirebooter9604789136141130597.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="9.0.1+11"/>
+    <property name="user.name" value="ivan.zialinski"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\ivan.zialinski\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\IVAN~1.ZIA\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2017.3"/>
+    <property name="java.version" value="9.0.1"/>
+    <property name="user.dir" value="D:\Github_Repos\Zialinski_task_JUnit5"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="webdriver.gecko.driver" value="drivers/geckodriver.exe"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-9.0.1\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\NUnit.org\nunit-console;C:\xampp\apache\bin\httpd.exe;C:\Maven\bin;C:\Program Files\Java\jdk-9.0.1\bin;C:\WebDrivers\ChromeDriver\;C:\WebDrivers\FirefoxDriver\;C:\Users\ivan.zialinski\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="9.0.1+11"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="53.0"/>
+  </properties>
+  <testcase name="authWithValidData[0]" classname="com.gmail.authorization.AuthorizationTest" time="36.797">
+    <error message="unknown error: Element &lt;input type=&quot;password&quot; class=&quot;whsOnd zHQkBf&quot; jsname=&quot;YPqjbf&quot; autocomplete=&quot;current-password&quot; spellcheck=&quot;false&quot; tabindex=&quot;0&quot; aria-label=&quot;Enter your password&quot; name=&quot;password&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; dir=&quot;ltr&quot; data-initial-dir=&quot;ltr&quot; data-initial-value=&quot;&quot;&gt; is not clickable at point (974, 435). Other element would receive the click: &lt;div class=&quot;ANuIbb IdAqtf&quot; jsname=&quot;k4HEge&quot; tabindex=&quot;0&quot;&gt;&lt;/div&gt;&#10;  (Session info: chrome=63.0.3239.84)&#10;  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;&#10;System info: host: &apos;WSB-174&apos;, ip: &apos;192.168.6.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.33.506120 (e3e53437346286..., userDataDir: C:\Users\IVAN~1.ZIA\AppData...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}&#10;Session ID: c841f8112ee09261672dd6d338d1d418" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
+unknown error: Element <input type="password" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="current-password" spellcheck="false" tabindex="0" aria-label="Enter your password" name="password" autocapitalize="off" autocorrect="off" dir="ltr" data-initial-dir="ltr" data-initial-value=""> is not clickable at point (974, 435). Other element would receive the click: <div class="ANuIbb IdAqtf" jsname="k4HEge" tabindex="0"></div>
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'WSB-174', ip: '192.168.6.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.33.506120 (e3e53437346286..., userDataDir: C:\Users\IVAN~1.ZIA\AppData...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}
+Session ID: c841f8112ee09261672dd6d338d1d418
+	at com.gmail.authorization.AuthorizationTest.authWithValidData(AuthorizationTest.java:20)
+]]></error>
+    <system-out><![CDATA[1513769180173	geckodriver	INFO	geckodriver 0.19.0
+1513769180182	geckodriver	INFO	Listening on 127.0.0.1:25256
+1513769180277	geckodriver	INFO	geckodriver 0.19.0
+1513769180289	geckodriver	INFO	Listening on 127.0.0.1:11289
+Starting ChromeDriver 2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f) on port 30775
+Only local connections are allowed.
+Starting ChromeDriver 2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f) on port 25979
+Only local connections are allowed.
+1513769180686	geckodriver	INFO	geckodriver 0.19.0
+1513769180696	geckodriver	INFO	Listening on 127.0.0.1:15217
+Starting ChromeDriver 2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f) on port 37048
+Only local connections are allowed.
+1513769181318	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\IVAN~1.ZIA\\AppData\\Local\\Temp\\rust_mozprofile.jfdJG5ss7LUq"
+1513769181372	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\IVAN~1.ZIA\\AppData\\Local\\Temp\\rust_mozprofile.rrplAeF7CPYr"
+1513769181485	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\IVAN~1.ZIA\\AppData\\Local\\Temp\\rust_mozprofile.NdZazaQj0ybB"
+1513769186329	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+1513769186397	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+1513769186859	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+Dec 20, 2017 2:26:26 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Dec 20, 2017 2:26:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Dec 20, 2017 2:26:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+1513769189769	Marionette	INFO	Enabled via --marionette
+1513769190322	Marionette	INFO	Enabled via --marionette
+1513769190480	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ivan.zialinski\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 11684] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\ivan.zialinski\AppData\Local\openvr\openvrpaths.vrpath
+[Child 27372] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 27372] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x240053,name=PContent::Msg_ProvideAnonymousTemporaryFile) Closed channel: cannot send/recv
+
+Unable to read VR Path Registry from C:\Users\ivan.zialinski\AppData\Local\openvr\openvrpaths.vrpath
+[Child 16712] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16712] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\ivan.zialinski\AppData\Local\openvr\openvrpaths.vrpath
+[Child 21756] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513769204444	Marionette	INFO	Listening on port 57348
+1513769204796	Marionette	INFO	Listening on port 57338
+1513769204867	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513769204933	Marionette	DEBUG	Register listener.js for window 6442450945
+1513769204942	Marionette	WARN	TLS certificate errors will be ignored for this session
+Dec 20, 2017 2:26:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1513769205019	Marionette	DEBUG	Register listener.js for window 4294967297
+1513769205039	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+Dec 20, 2017 2:26:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1513769205646	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513769207128	Marionette	INFO	Listening on port 57343
+1513769207360	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513769207408	Marionette	DEBUG	Register listener.js for window 4294967297
+Dec 20, 2017 2:26:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1513769207510	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513769218680	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513769218681	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513769219998	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+1513769224376	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "6442450952"
+1513769224724	Marionette	DEBUG	Received DOM event "pageshow" for "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+1513769225233	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513769225523	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513769225523	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513769225847	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513769227159	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+1513769227546	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967304"
+1513769227561	Marionette	DEBUG	Received DOM event "pageshow" for "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+1513769228028	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513769232296	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513769232296	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513769232845	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513769233199	Marionette	DEBUG	Received DOM event "beforeunload" for "https://accounts.google.com/signin/v2/sl/pwd?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&cid=1&navigationDirection=forward"
+1513769234113	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+1513769234783	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967304"
+1513769234815	Marionette	DEBUG	Received DOM event "pageshow" for "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+1513769235366	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513769238566	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513769238649	Marionette	INFO	New connections will no longer be accepted
+Unable to read VR Path Registry from C:\Users\ivan.zialinski\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 1584] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\ivan.zialinski\AppData\Local\openvr\openvrpaths.vrpath
+[Child 24292] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513769244079	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513769244293	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513769244869	Marionette	INFO	New connections will no longer be accepted
+Unable to read VR Path Registry from C:\Users\ivan.zialinski\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 12440] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1513769246102	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513769246349	Marionette	DEBUG	Received DOM event "beforeunload" for "https://accounts.google.com/signin/v2/sl/pwd?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&cid=1&navigationDirection=forward"
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1513769251647	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1513769261677	Marionette	INFO	New connections will no longer be accepted
+Unable to read VR Path Registry from C:\Users\ivan.zialinski\AppData\Local\openvr\openvrpaths.vrpath
+[Child 26876] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Navigating to https://gmail.com
+Navigated to https://gmail.com
+Finding element by By.id: identifierId
+Element founded By.id: identifierId
+Clicking on [[ChromeDriver: chrome on XP (c841f8112ee09261672dd6d338d1d418)] -> id: identifierId]
+Clicked on [[ChromeDriver: chrome on XP (c841f8112ee09261672dd6d338d1d418)] -> id: identifierId]
+Finding element by By.id: identifierId
+Element founded By.id: identifierId
+Changing value [[ChromeDriver: chrome on XP (c841f8112ee09261672dd6d338d1d418)] -> id: identifierId]
+Value changed [[ChromeDriver: chrome on XP (c841f8112ee09261672dd6d338d1d418)] -> id: identifierId]
+Finding element by By.id: identifierNext
+Element founded By.id: identifierNext
+Clicking on [[ChromeDriver: chrome on XP (c841f8112ee09261672dd6d338d1d418)] -> id: identifierNext]
+Clicked on [[ChromeDriver: chrome on XP (c841f8112ee09261672dd6d338d1d418)] -> id: identifierNext]
+Finding element by By.name: password
+Element founded By.name: password
+Finding element by By.name: password
+Element founded By.name: password
+Clicking on [[ChromeDriver: chrome on XP (c841f8112ee09261672dd6d338d1d418)] -> name: password]
+Exception occured at unknown error: Element <input type="password" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="current-password" spellcheck="false" tabindex="0" aria-label="Enter your password" name="password" autocapitalize="off" autocorrect="off" dir="ltr" data-initial-dir="ltr" data-initial-value=""> is not clickable at point (974, 435). Other element would receive the click: <div class="ANuIbb IdAqtf" jsname="k4HEge" tabindex="0"></div>
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'WSB-174', ip: '192.168.6.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.33.506120 (e3e53437346286..., userDataDir: C:\Users\IVAN~1.ZIA\AppData...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}
+Session ID: c841f8112ee09261672dd6d338d1d418
+]]></system-out>
+    <system-err><![CDATA[Dec 20, 2017 2:27:03 PM org.openqa.selenium.os.OsProcess destroy
+SEVERE: Unable to kill process Process[pid=26868, exitValue=1]
+]]></system-err>
+  </testcase>
+  <testcase name="authWithInvalidLogin[0]" classname="com.gmail.authorization.AuthorizationTest" time="54.894"/>
+  <testcase name="authWithInvalidPassword[0]" classname="com.gmail.authorization.AuthorizationTest" time="53.759">
+    <error message="unknown error: Element &lt;input type=&quot;password&quot; class=&quot;whsOnd zHQkBf&quot; jsname=&quot;YPqjbf&quot; autocomplete=&quot;current-password&quot; spellcheck=&quot;false&quot; tabindex=&quot;0&quot; aria-label=&quot;Enter your password&quot; name=&quot;password&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; dir=&quot;ltr&quot; data-initial-dir=&quot;ltr&quot; data-initial-value=&quot;&quot;&gt; is not clickable at point (962, 435). Other element would receive the click: &lt;div class=&quot;ANuIbb IdAqtf&quot; jsname=&quot;k4HEge&quot; tabindex=&quot;0&quot;&gt;&lt;/div&gt;&#10;  (Session info: chrome=63.0.3239.84)&#10;  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;&#10;System info: host: &apos;WSB-174&apos;, ip: &apos;192.168.6.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.33.506120 (e3e53437346286..., userDataDir: C:\Users\IVAN~1.ZIA\AppData...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}&#10;Session ID: eeec5763221b0ee3edb196fa1b89e3fe" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
+unknown error: Element <input type="password" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="current-password" spellcheck="false" tabindex="0" aria-label="Enter your password" name="password" autocapitalize="off" autocorrect="off" dir="ltr" data-initial-dir="ltr" data-initial-value=""> is not clickable at point (962, 435). Other element would receive the click: <div class="ANuIbb IdAqtf" jsname="k4HEge" tabindex="0"></div>
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'WSB-174', ip: '192.168.6.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.33.506120 (e3e53437346286..., userDataDir: C:\Users\IVAN~1.ZIA\AppData...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}
+Session ID: eeec5763221b0ee3edb196fa1b89e3fe
+	at com.gmail.authorization.AuthorizationTest.authWithInvalidPassword(AuthorizationTest.java:37)
+]]></error>
+    <system-out><![CDATA[Navigating to https://gmail.com
+Navigated to https://gmail.com
+Finding element by By.id: identifierId
+Element founded By.id: identifierId
+Clicking on [[ChromeDriver: chrome on XP (eeec5763221b0ee3edb196fa1b89e3fe)] -> id: identifierId]
+Clicked on [[ChromeDriver: chrome on XP (eeec5763221b0ee3edb196fa1b89e3fe)] -> id: identifierId]
+Finding element by By.id: identifierId
+Element founded By.id: identifierId
+Changing value [[ChromeDriver: chrome on XP (eeec5763221b0ee3edb196fa1b89e3fe)] -> id: identifierId]
+Value changed [[ChromeDriver: chrome on XP (eeec5763221b0ee3edb196fa1b89e3fe)] -> id: identifierId]
+Finding element by By.id: identifierNext
+Element founded By.id: identifierNext
+Clicking on [[ChromeDriver: chrome on XP (eeec5763221b0ee3edb196fa1b89e3fe)] -> id: identifierNext]
+Clicked on [[ChromeDriver: chrome on XP (eeec5763221b0ee3edb196fa1b89e3fe)] -> id: identifierNext]
+Finding element by By.name: password
+Element founded By.name: password
+Finding element by By.name: password
+Element founded By.name: password
+Clicking on [[ChromeDriver: chrome on XP (eeec5763221b0ee3edb196fa1b89e3fe)] -> name: password]
+Exception occured at unknown error: Element <input type="password" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="current-password" spellcheck="false" tabindex="0" aria-label="Enter your password" name="password" autocapitalize="off" autocorrect="off" dir="ltr" data-initial-dir="ltr" data-initial-value=""> is not clickable at point (962, 435). Other element would receive the click: <div class="ANuIbb IdAqtf" jsname="k4HEge" tabindex="0"></div>
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'WSB-174', ip: '192.168.6.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.33.506120 (e3e53437346286..., userDataDir: C:\Users\IVAN~1.ZIA\AppData...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}
+Session ID: eeec5763221b0ee3edb196fa1b89e3fe
+]]></system-out>
+  </testcase>
+  <testcase name="authWithInvalidPassword[1]" classname="com.gmail.authorization.AuthorizationTest" time="36.735"/>
+  <testcase name="authWithValidData[1]" classname="com.gmail.authorization.AuthorizationTest" time="56.578">
+    <error message="Expected condition failed: waiting for com.pages.objects.gmail.mail.GmailInboxPage$$Lambda$292/1448198172@4f6dbe56 (tried for 10 second(s) with 500 MILLISECONDS interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for com.pages.objects.gmail.mail.GmailInboxPage$$Lambda$292/1448198172@4f6dbe56 (tried for 10 second(s) with 500 MILLISECONDS interval)
+	at com.gmail.authorization.AuthorizationTest.authWithValidData(AuthorizationTest.java:22)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //div[@jscontroller='DUNnfe']//div[@role='button']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'WSB-174', ip: '192.168.6.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 11684, moz:profile: C:\Users\ivan.zialinski\App..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 8ad2ae54-f319-4c98-9b1d-4e17295fda3c
+*** Element info: {Using=xpath, value=//div[@jscontroller='DUNnfe']//div[@role='button']}
+	at com.gmail.authorization.AuthorizationTest.authWithValidData(AuthorizationTest.java:22)
+</error>
+    <system-out><![CDATA[Navigating to https://gmail.com
+Navigated to https://gmail.com
+Finding element by By.id: identifierId
+Element founded By.id: identifierId
+Clicking on [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> id: identifierId]
+Clicked on [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> id: identifierId]
+Finding element by By.id: identifierId
+Element founded By.id: identifierId
+Changing value [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> id: identifierId]
+Value changed [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> id: identifierId]
+Finding element by By.id: identifierNext
+Element founded By.id: identifierNext
+Clicking on [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> id: identifierNext]
+Clicked on [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> id: identifierNext]
+Finding element by By.name: password
+Element founded By.name: password
+Finding element by By.name: password
+Element founded By.name: password
+Finding element by By.name: password
+Element founded By.name: password
+Clicking on [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> name: password]
+Clicked on [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> name: password]
+Finding element by By.name: password
+Element founded By.name: password
+Changing value [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> name: password]
+Value changed [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> name: password]
+Finding element by By.id: passwordNext
+Element founded By.id: passwordNext
+Clicking on [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> id: passwordNext]
+Clicked on [[FirefoxDriver: firefox on XP (8ad2ae54-f319-4c98-9b1d-4e17295fda3c)] -> id: passwordNext]
+Finding element by By.xpath: //div[@jscontroller='DUNnfe']//div[@role='button']
+Exception occured at Unable to locate element: //div[@jscontroller='DUNnfe']//div[@role='button']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'WSB-174', ip: '192.168.6.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 11684, moz:profile: C:\Users\ivan.zialinski\App..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 8ad2ae54-f319-4c98-9b1d-4e17295fda3c
+*** Element info: {Using=xpath, value=//div[@jscontroller='DUNnfe']//div[@role='button']}
+]]></system-out>
+  </testcase>
+  <testcase name="authWithInvalidLogin[1]" classname="com.gmail.authorization.AuthorizationTest" time="42.452"/>
+</testsuite>

@@ -2,6 +2,8 @@ package com.driver.config;
 
 import org.openqa.selenium.WebDriver;
 
+import org.openqa.selenium.WebDriver;
+
 import java.util.concurrent.TimeUnit;
 
 public class DriverConfig {

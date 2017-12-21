@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.gmail.fail.FailTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 73.08 s <<< FAILURE! - in com.gmail.fail.FailTest
+checkFail[0](com.gmail.fail.FailTest)  Time elapsed: 73.08 s  <<< FAILURE!
+java.lang.AssertionError: Login was not applied
+	at com.gmail.fail.FailTest.checkFail(FailTest.java:20)
+
+checkFail[1](com.gmail.fail.FailTest)  Time elapsed: 51.101 s  <<< FAILURE!
+java.lang.AssertionError: Login was not applied
+	at com.gmail.fail.FailTest.checkFail(FailTest.java:20)
+

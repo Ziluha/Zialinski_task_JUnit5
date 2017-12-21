@@ -3,42 +3,35 @@ package com.gmail;
 import com.driver.DriverInitQuit;
 import com.driver.config.DriverConfig;
 import com.enums.Browsers;
+import com.pages.factory.PagesFactory;
 import com.properties.PropertiesReading;
-import org.junit.*;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.provider.*;
 import org.openqa.selenium.WebDriver;
 
-import java.util.Arrays;
-import java.util.Collection;
+import java.util.stream.Stream;
 
-@RunWith(value = Parameterized.class)
-public abstract class BaseTest {
+//@ExtendWith(DriverParameterResolver.class)
+public class BaseTest {
     protected WebDriver driver;
     private DriverInitQuit driverInitQuit;
     private DriverConfig driverConfig;
+    protected PagesFactory pages;
 
-    public BaseTest(Browsers.name browserName){
-        driverInitQuit = new DriverInitQuit();
-        this.driver = driverInitQuit.initDriver(browserName);
-    }
-
-    @Parameterized.Parameters
-    public static Collection<Object> data() {
-        Object[][] data = new Object[][]{
-                { Browsers.name.Chrome },
-                { Browsers.name.Firefox }};
-        return Arrays.asList(data);
-    }
-
-    @Before
-    public void initTest(){
+    @BeforeEach
+    //@MethodSource("stringIntAndListProvider")
+    public void initTest(/*Browsers.name browserName*/) {
         driverConfig = new DriverConfig();
+        driverInitQuit = new DriverInitQuit();
+        driver = driverInitQuit.initDriver(Browsers.name.Chrome);
         driverConfig.loadApp(driver, PropertiesReading.getURLs().getProperty("gmailURL"));
+        pages = new PagesFactory(driver);
     }
 
-    @After
-    public void endTest(){
+    @AfterEach
+    public void endTest() {
         driverInitQuit.quitDriver(driver);
     }
 }

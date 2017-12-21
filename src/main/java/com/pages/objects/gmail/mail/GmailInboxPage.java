@@ -25,7 +25,8 @@ public class GmailInboxPage extends BasePage{
 
     public GmailInboxPage(WebDriver driver){
         super(driver);
-        this.driver=driver;}
+        this.driver=driver;
+    }
 
     public void clickComposeButton(){
         composeButton.click();

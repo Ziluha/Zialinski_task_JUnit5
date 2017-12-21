@@ -1,0 +1,4 @@
+com\gmail\BaseTest.class
+com\gmail\fail\FailTest.class
+com\gmail\drafts\DraftsTest.class
+com\gmail\authorization\AuthorizationTest.class

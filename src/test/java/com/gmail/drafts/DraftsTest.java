@@ -3,22 +3,16 @@ package com.gmail.drafts;
 import com.enums.Browsers;
 import com.gmail.BaseTest;
 import com.pages.factory.PagesFactory;
-import com.properties.PropertiesReading;
-import org.junit.Assert;
-import org.junit.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DraftsTest extends BaseTest {
-    private PagesFactory pages= new PagesFactory(driver);
-
-    public DraftsTest(Browsers.name browserName) {
-        super(browserName);
-    }
-
-    @Before
+    @BeforeEach
     public void setUpAuth(){
-        pages.getLoginPage().inputLogin(PropertiesReading.getCredentials().getProperty("validLogin"));
+        pages.getLoginPage().inputLogin("test.task.zel");
         pages.getLoginPage().submitLogin();
-        pages.getPasswordPage().inputPassword(PropertiesReading.getCredentials().getProperty("validPassword"));
+        pages.getPasswordPage().inputPassword("Test1234Test");
         pages.getPasswordPage().submitPassword();
     }
 
@@ -26,24 +20,24 @@ public class DraftsTest extends BaseTest {
     public void addMessageToDrafts(){
         pages.getInboxPage().clickComposeButton();
         pages.getInboxPage().inputMessageSubject("example");
-        Assert.assertTrue("Saved Label is not presented",
-                pages.getInboxPage().isSavedLabelPresented());
+        assertTrue(pages.getInboxPage().isSavedLabelPresented(),
+                "Saved Label is not presented");
         pages.getInboxPage().clickDraftsLink();
-        Assert.assertTrue("Draft Page is not opened",
-                pages.getDraftsPage().isDraftPageOpened());
-        Assert.assertTrue("No message with this subject in drafts",
-                pages.getDraftsPage().isDraftAdded("example"));
+        assertTrue(pages.getDraftsPage().isDraftPageOpened(),
+                "Draft Page is not opened");
+        assertTrue(pages.getDraftsPage().isDraftAdded("example"),
+                "No message with this subject in drafts");
     }
 
     @Test
     public void deleteMessageFromDrafts(){
         pages.getInboxPage().clickDraftsLink();
-        Assert.assertTrue("Draft Page is not opened",
-                pages.getDraftsPage().isDraftPageOpened());
-        pages.getDraftsPage().chooseFirstDraft();
+        assertTrue(pages.getDraftsPage().isDraftPageOpened(),
+                "Draft Page is not opened");
         int countOfDraftsAtStart = pages.getDraftsPage().getCountOfDrafts();
+        pages.getDraftsPage().chooseFirstDraft();
         pages.getDraftsPage().clickDiscardDraftButton();
-        Assert.assertEquals("Count of drafts at start and after discarding doesn't match",
-                countOfDraftsAtStart-1, pages.getDraftsPage().getCountOfDrafts());
+        assertEquals(countOfDraftsAtStart-1, pages.getDraftsPage().getCountOfDrafts(),
+                "Count of drafts at start and after discarding doesn't match");
     }
 }

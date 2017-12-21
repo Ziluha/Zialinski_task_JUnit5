@@ -1,0 +1,13 @@
+com\pages\objects\gmail\mail\GmailDraftsPage.class
+com\enums\Browsers$name.class
+com\pages\objects\gmail\authorization\GmailLoginPage.class
+com\pages\factory\PagesFactory.class
+com\pages\objects\gmail\authorization\GmailPasswordPage.class
+com\pages\objects\gmail\mail\GmailInboxPage.class
+com\properties\PropertiesReading.class
+com\driver\DriverInitQuit$1.class
+com\pages\base\BasePage.class
+com\driver\DriverInitQuit.class
+com\enums\Browsers.class
+com\driver\config\DriverConfig.class
+com\reports\eventfiring\EventHandler.class

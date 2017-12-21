@@ -3,40 +3,42 @@ package com.gmail.authorization;
 import com.enums.Browsers;
 import com.gmail.BaseTest;
 import com.pages.factory.PagesFactory;
-import com.properties.PropertiesReading;
-import org.junit.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-public class AuthorizationTest extends BaseTest {
-    private PagesFactory pages= new PagesFactory(driver);
+import java.util.Arrays;
+import java.util.stream.Stream;
 
-    public AuthorizationTest(Browsers.name browserName){
-        super(browserName);
-    }
+import static org.junit.jupiter.api.Assertions.*;
 
-    @Test
+public class AuthorizationTest extends BaseTest{
+    @ParameterizedTest
     public void authWithValidData(){
-        pages.getLoginPage().inputLogin(PropertiesReading.getCredentials().getProperty("validLogin"));
+        pages.getLoginPage().inputLogin("test.task.zel");
         pages.getLoginPage().submitLogin();
-        pages.getPasswordPage().inputPassword(PropertiesReading.getCredentials().getProperty("validPassword"));
+        pages.getPasswordPage().inputPassword("Test1234Test");
         pages.getPasswordPage().submitPassword();
-        Assert.assertTrue("User was not logged in", pages.getInboxPage().isLoginSucceed());
+        assertTrue( pages.getInboxPage().isLoginSucceed(),
+                "User was not logged in");
     }
 
     @Test
     public void authWithInvalidLogin(){
-        pages.getLoginPage().inputLogin(PropertiesReading.getCredentials().getProperty("invalidLogin"));
+        pages.getLoginPage().inputLogin("test.invalid.zel");
         pages.getLoginPage().submitLogin();
-        Assert.assertTrue("Login Error Label is not presented",
-                pages.getLoginPage().isLoginErrorLabelPresented());
+        assertTrue(pages.getLoginPage().isLoginErrorLabelPresented(),
+                "Login Error Label is not presented");
     }
 
     @Test
     public void authWithInvalidPassword(){
-        pages.getLoginPage().inputLogin(PropertiesReading.getCredentials().getProperty("validLogin"));
+        pages.getLoginPage().inputLogin("test.task.zel");
         pages.getLoginPage().submitLogin();
-        pages.getPasswordPage().inputPassword(PropertiesReading.getCredentials().getProperty("invalidPassword"));
+        pages.getPasswordPage().inputPassword("InvalidPassword");
         pages.getPasswordPage().submitPassword();
-        Assert.assertTrue("Password Error Label is not presented",
-                pages.getPasswordPage().isPasswordErrorLabelPresented());
+        assertTrue(pages.getPasswordPage().isPasswordErrorLabelPresented(),
+                "Password Error Label is not presented");
     }
 }
