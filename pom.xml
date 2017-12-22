@@ -64,9 +64,8 @@
                 </dependencies>
                 <configuration>
                     <parallel>methods</parallel>
-                    <forkCount>6</forkCount>
-                    <reuseForks>true</reuseForks>
-                    <threadCount>6</threadCount>
+                    <threadCount>4</threadCount>
+                    <forkMode>perthread</forkMode>
                 </configuration>
             </plugin>
         </plugins>

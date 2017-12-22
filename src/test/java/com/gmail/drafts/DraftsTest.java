@@ -5,19 +5,25 @@ import com.gmail.BaseTest;
 import com.pages.factory.PagesFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DraftsTest extends BaseTest {
-    @BeforeEach
-    public void setUpAuth(){
+
+    private void setUpAuth(){
         pages.getLoginPage().inputLogin("test.task.zel");
         pages.getLoginPage().submitLogin();
         pages.getPasswordPage().inputPassword("Test1234Test");
         pages.getPasswordPage().submitPassword();
     }
 
-    @Test
-    public void addMessageToDrafts(){
+    @ParameterizedTest
+    @EnumSource(Browsers.name.class)
+    public void addMessageToDrafts(Browsers.name browserName){
+        initDriver(browserName);
+        setUpAuth();
         pages.getInboxPage().clickComposeButton();
         pages.getInboxPage().inputMessageSubject("example");
         assertTrue(pages.getInboxPage().isSavedLabelPresented(),
@@ -29,8 +35,11 @@ public class DraftsTest extends BaseTest {
                 "No message with this subject in drafts");
     }
 
-    @Test
-    public void deleteMessageFromDrafts(){
+    @ParameterizedTest
+    @EnumSource(Browsers.name.class)
+    public void deleteMessageFromDrafts(Browsers.name browserName){
+        initDriver(browserName);
+        setUpAuth();
         pages.getInboxPage().clickDraftsLink();
         assertTrue(pages.getDraftsPage().isDraftPageOpened(),
                 "Draft Page is not opened");
