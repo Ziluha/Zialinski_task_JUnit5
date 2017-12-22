@@ -63,7 +63,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <parallel>methods</parallel>
+                    <parallel>all</parallel>
                     <threadCount>4</threadCount>
                     <forkMode>perthread</forkMode>
                 </configuration>

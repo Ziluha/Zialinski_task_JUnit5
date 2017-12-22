@@ -2,9 +2,6 @@ package com.gmail.drafts;
 
 import com.enums.Browsers;
 import com.gmail.BaseTest;
-import com.pages.factory.PagesFactory;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
@@ -12,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class DraftsTest extends BaseTest {
 
-   /* private void setUpAuth(){
+    private void setUpAuth(){
         pages.getLoginPage().inputLogin("test.task.zel");
         pages.getLoginPage().submitLogin();
         pages.getPasswordPage().inputPassword("Test1234Test");
@@ -48,5 +45,5 @@ public class DraftsTest extends BaseTest {
         pages.getDraftsPage().clickDiscardDraftButton();
         assertEquals(countOfDraftsAtStart-1, pages.getDraftsPage().getCountOfDrafts(),
                 "Count of drafts at start and after discarding doesn't match");
-    }*/
+    }
 }
