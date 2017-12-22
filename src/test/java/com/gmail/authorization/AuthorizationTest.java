@@ -4,7 +4,6 @@ import com.enums.Browsers;
 import com.gmail.BaseTest;
 import com.pages.factory.PagesFactory;
 import com.properties.PropertiesReading;
-import com.sun.xml.internal.rngom.parse.host.Base;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -19,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AuthorizationTest extends BaseTest{
 
-    @ParameterizedTest
+    /*@ParameterizedTest
     @EnumSource(Browsers.name.class)
     public void authWithValidData(Browsers.name browserName){
         initDriver(browserName);
@@ -51,5 +50,5 @@ public class AuthorizationTest extends BaseTest{
         pages.getPasswordPage().submitPassword();
         assertTrue(pages.getPasswordPage().isPasswordErrorLabelPresented(),
                 "Password Error Label is not presented");
-    }
+    }*/
 }

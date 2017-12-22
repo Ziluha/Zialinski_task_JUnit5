@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class DraftsTest extends BaseTest {
 
-    private void setUpAuth(){
+   /* private void setUpAuth(){
         pages.getLoginPage().inputLogin("test.task.zel");
         pages.getLoginPage().submitLogin();
         pages.getPasswordPage().inputPassword("Test1234Test");
@@ -48,5 +48,5 @@ public class DraftsTest extends BaseTest {
         pages.getDraftsPage().clickDiscardDraftButton();
         assertEquals(countOfDraftsAtStart-1, pages.getDraftsPage().getCountOfDrafts(),
                 "Count of drafts at start and after discarding doesn't match");
-    }
+    }*/
 }
