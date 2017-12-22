@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+
 public class DriverInitQuit {
     private WebDriver driver;
 
@@ -13,11 +14,11 @@ public class DriverInitQuit {
         switch (browserName){
             case Chrome:
                 System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-                driver = startEventFiring(new ChromeDriver());
+                driver = new ChromeDriver();
                 return driver;
             case Firefox:
                 System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-                driver = startEventFiring(new FirefoxDriver());
+                driver = new FirefoxDriver();
                 return driver;
         }
         return null;

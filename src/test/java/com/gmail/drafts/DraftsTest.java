@@ -2,13 +2,13 @@ package com.gmail.drafts;
 
 import com.enums.Browsers;
 import com.gmail.BaseTest;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DraftsTest extends BaseTest {
-
     private void setUpAuth(){
         pages.getLoginPage().inputLogin("test.task.zel");
         pages.getLoginPage().submitLogin();
@@ -18,6 +18,7 @@ public class DraftsTest extends BaseTest {
 
     @ParameterizedTest
     @EnumSource(Browsers.name.class)
+    @DisplayName("Add message to drafts")
     public void addMessageToDrafts(Browsers.name browserName){
         initDriver(browserName);
         setUpAuth();
@@ -34,6 +35,7 @@ public class DraftsTest extends BaseTest {
 
     @ParameterizedTest
     @EnumSource(Browsers.name.class)
+    @DisplayName("Delete message from drafts")
     public void deleteMessageFromDrafts(Browsers.name browserName){
         initDriver(browserName);
         setUpAuth();

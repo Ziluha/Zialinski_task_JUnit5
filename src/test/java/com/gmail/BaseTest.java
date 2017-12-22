@@ -14,7 +14,7 @@ public class BaseTest {
     protected DriverConfig driverConfig;
     protected PagesFactory pages;
 
-    protected void initDriver(Browsers.name browserName){
+    public void initDriver(Browsers.name browserName){
         driverConfig = new DriverConfig();
         driverInitQuit = new DriverInitQuit();
         driver = driverInitQuit.initDriver(browserName);

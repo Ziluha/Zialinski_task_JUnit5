@@ -64,7 +64,7 @@
                 </dependencies>
                 <configuration>
                     <parallel>all</parallel>
-                    <threadCount>4</threadCount>
+                    <threadCount>12</threadCount>
                     <forkMode>perthread</forkMode>
                 </configuration>
             </plugin>
